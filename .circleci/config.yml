@@ -20,7 +20,7 @@ jobs:
   build:
     executor: my-executor
     steps:
-      - run: checkout
+      - checkout
       - run: npm run lint
       - run:
           name: Upload Failed Tests
@@ -30,7 +30,7 @@ jobs:
   test:
     executor: my-executor
     steps:
-      - run: checkout
+      - checkout
       - run: npm run test
       - run:
           name: Upload Failed Tests
@@ -40,7 +40,7 @@ jobs:
   analyse:
     executor: my-executor
     steps:
-      - run: checkout
+      - checkout
       - run: npm audit
       - run:
           name: Upload Failed Tests
