@@ -21,6 +21,7 @@ jobs:
     executor: my-executor
     steps:
       - checkout
+      - run: npm i
       - run: npm run lint
       - run:
           name: Upload Failed Tests
@@ -31,6 +32,7 @@ jobs:
     executor: my-executor
     steps:
       - checkout
+      - run: npm i
       - run: npm run test
       - run:
           name: Upload Failed Tests
